@@ -4,21 +4,18 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
-            Template
+            Objecter med egne felt
         </title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script type="text/javascript" src="script.js" defer></script>
     </head>
     <body>
-        <input type="date" />
-        Oppgaver<br /><br />
+        <p><input id="dateDescription" type="date" /> Oppgaver</p>
         <table id="tasksTable"></table>
         <p>
-            <input id="taskDescription" type="text" /><button
-                onclick="addTask()"
-            >
-                Legg til oppgave
-            </button>
+            <input id="taskDescription" type="text" placeholder="Oppgave" />
+            <input id="personDescription" type="text" placeholder="Person" />
+            <button onclick="addTask()">Legg til oppgave</button>
         </p>
     </body>
 </html>
