@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <input type="number" onkeydown="if (event.code === 'Enter') addNumber(this);" />
+        <div id="stats"></div>
+        <script>
+            var numbers = [];
+            var statsDiv = document.getElementById('stats');
+
+            function addNumber(inputTag) {
+                numbers.push(parseInt(inputTag.value));
+                inputTag.value = '';
+                show();
+            }
+
+            function show() {
+                const numbersHtml = `<ul>${numbers.map((n) => `<li>${n}</li>`).join('')}</ul>`;
+                var min = numbers[0];
+                var max = numbers[0];
+                var sum = 0;
+                for (let n of numbers) {
+                    if (n < min) min = n;
+                    if (n > max) max = n;
+                    sum += n;
+                }
+                var avg = sum / numbers.length;
+
+                const statsHtml = `<table>
+                    <tr><td>Min</td><td>${min}</td></tr>
+                    <tr><td>Max</td><td>${max}</td></tr>
+                    <tr><td>Sum</td><td>${sum}</td></tr>
+                    <tr><td>Snitt</td><td>${avg}</td></tr>
+                    <tr><td>Antall</td><td>${numbers.length}</td></tr>
+                </table>`;
+                statsDiv.innerHTML = statsHtml + numbersHtml;
+            }
+        </script>
+    </body>
+</html>
