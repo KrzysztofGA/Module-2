@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(49, 46, 43);
+    padding: 10px;
+    font-size: 300%;
+}
+
+div.board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+}
+
+div.black {
+    background-color: rgb(118, 150, 86);
+}
+
+div.white {
+    background-color: rgb(238, 238, 210);
+}
+
+span.whitePiece {
+    color: white;
+}

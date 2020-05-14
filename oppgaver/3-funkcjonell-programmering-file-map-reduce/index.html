@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Objecter med egne felt
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" src="script.js" defer></script>
+    </head>
+    <body>
+        <p><input type="date" oninput="newTask.date = this.value" /> Oppgaver</p>
+        <table id="tasksTable"></table>
+        <p>
+            <input type="text" placeholder="Oppgave" oninput="newTask.description = this.value" />
+            <input type="text" placeholder="Person" oninput="newTask.person = this.value" />
+            <button onclick="addTask()">Legg til oppgave</button>
+        </p>
+    </body>
+</html>

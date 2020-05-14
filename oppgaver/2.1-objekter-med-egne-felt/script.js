@@ -71,7 +71,7 @@ function createHtmlRow(i) {
                     <td>${task.description}</td>
                     <td>${task.person}</td>
                     <td>${displayLocalDate(task.date)}</td>
-                    <td><input onchange="changeIsDone(this, ${i})" type="checkbox" ${checkedHtml} /></td>
+                    <td><input onchange="changeIsDone(this.checked, ${i})" type="checkbox" ${checkedHtml} /></td>
                     <td>${displayLocalDate(task.completed)}</td>
                     <td>
                         <button onclick="deleteTask(${i})">Slett</button>
@@ -82,7 +82,7 @@ function createHtmlRow(i) {
                 <td><input id="editDescription${i}" type="text" value="${task.description}"/></td>
                 <td><input id="editPerson${i}" type="text" value="${task.person}"/></td>
                 <td><input id="editDate${i}" type="date" value="${task.date}"/></td>
-                <td><input onchange="changeIsDone(this, ${i})" type="checkbox" ${checkedHtml} /></td>
+                <td><input onchange="changeIsDone(this.checked, ${i})" type="checkbox" ${checkedHtml} /></td>
                 <td>${displayLocalDate(task.completed)}</td>
                 <td>
                     <button onclick="updateTask(${i})">Lagre</button>
@@ -91,10 +91,8 @@ function createHtmlRow(i) {
 }
 
 function changeIsDone(checkbox, index) {
-    tasks[index].isDone = checkbox.checked;
-    checkbox.checked
-        ? (tasks[index].completed = new Date().toISOString().substr(0, 10))
-        : (tasks[index].completed = '');
+    tasks[index].isDone = checkbox;
+    checkbox ? (tasks[index].completed = new Date().toISOString().substr(0, 10)) : (tasks[index].completed = '');
     show();
 }
 
