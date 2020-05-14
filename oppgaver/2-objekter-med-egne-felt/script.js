@@ -68,9 +68,9 @@ function createHtmlRow(i) {
         return `<tr>
                     <td>${task.description}</td>
                     <td>${task.person}</td>
-                    <td>${task.date}</td>
+                    <td>${displayLocalDate(task.date)}</td>
                     <td><input onchange="changeIsDone(this, ${i})" type="checkbox" ${checkedHtml} /></td>
-                    <td>${task.completed}</td>
+                    <td>${displayLocalDate(task.completed)}</td>
                     <td>
                         <button onclick="deleteTask(${i})">Slett</button>
                         <button onclick="editTask(${i})">Rediger</button>
@@ -81,7 +81,9 @@ function createHtmlRow(i) {
                 <td><input id="editPerson${i}" type="text" value="${task.person}"/></td>
                 <td><input id="editDate${i}" type="date" value="${task.date}"/></td>
                 <td><input onchange="changeIsDone(this, ${i})" type="checkbox" ${checkedHtml} /></td>
-                <td><input id="editCompleted${i}" type="date" value="${task.completed}"/></td>
+                <!-- <td><input id="editCopleted${i}" type="date" value="${task.completed}"/></td> -->
+                <!-- allows editing complited -->
+                <td>${displayLocalDate(task.completed)}</td>
                 <td>
                     <button onclick="updateTask(${i})">Lagre</button>
                 </td>
@@ -113,13 +115,17 @@ function updateTask(index) {
     const inputPerson = document.getElementById(idPerson);
     const idDate = `editDate${index}`;
     const inputDate = document.getElementById(idDate);
-    const idCompleted = `editCompleted${index}`;
-    const inputCompleted = document.getElementById(idCompleted);
+    // const idCompleted = `editCompleted${index}`; //allows editing completed
+    // const inputCompleted = document.getElementById(idCompleted); //allows editing completed
     const task = tasks[index];
     task.description = inputDescritpion.value;
     task.person = inputPerson.value;
     task.date = inputDate.value;
     task.editMode = false;
-    task.completed = inputCompleted.value;
+    // task.completed = inputCompleted.value;  //allows editing completed
     show();
+}
+
+function displayLocalDate(dateIso) {
+    return dateIso ? new Date(dateIso).toLocaleDateString() : '';
 }
