@@ -22,13 +22,13 @@ const tasks = [
         completed: '',
     },
 ];
-
-// Controller
 const newTask = {
     description: '',
     person: '',
     date: '',
 };
+
+// Controller
 function addTask() {
     tasks.push({
         description: newTask.description,
