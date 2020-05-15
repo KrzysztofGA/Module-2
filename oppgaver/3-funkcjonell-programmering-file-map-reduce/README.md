@@ -1,25 +1,14 @@
-# Objekter med egne felt
+# Funksjonell programmering med filter, map og reduce
 
-🌐 [Link til Side][1] 🌐  
-📂 [Link til GitHub][2] 📂
+🌐 [Link til Side chessFunctional.html][1] 🌐  
+🌐 [Link til Side chessImperativ.html][2] 🌐  
+📂 [Link til GitHub][3] 📂
 
 ## Note
 
-### Norsk
+[YouTube][4]
 
-1. Legg til en ny kolonne for person. Må kunne angis når man lager ny oppgave og må kunne redigeres
-
-1. Legg til en ny kolonne for frist. Bruk input-tag med `type="date"`. Konvertering til visningsformat: `new Date("2019-02-13").toLocaleDateString()`. For å lage en dato på riktig format til `<input type="date" />`, bruk `myDate.toISOString().substr(0,10)`
-
-1. Legg til en ny kolonne for "gjort dato" som fylles ut automatisk når man trykker på checkboxen for at det er gjort.
-
-### Polski
-
-1. Dodaj nową kolumnę dla osoby. Musi być możliwe określenie podczas tworzenia nowego zadania i musi być możliwe do edycji.
-
-1. Dodaj nową kolumnę dla terminu. Użyj znacznika wejściowego `type="date"`. Konwersja formatu wyświetlania: `new Date("2019-02-13").toLocaleDateString()`. Aby utworzyć datę we właściwym formacie `<input type="date" />`, posłuż się `myDate.toISOString().substr(0,10)`
-
-1. Dodaj nową kolumnę „data wykonania”, która zostanie wypełniona automatycznie po naciśnięciu pola wyboru, aby to zrobić.
-
-[1]: https://krzysztofga.github.io/GetAcademy/Module-2/oppgaver/2.1-objekter-med-egne-felt
-[2]: https://github.com/KrzysztofGA/GetAcademy/tree/master/Module-2/oppgaver/2.1-objekter-med-egne-felt
+[1]: https://krzysztofga.github.io/GetAcademy/Module-2/oppgaver/3-funkcjonell-programmering-file-map-reduce/chessFunctional.html
+[2]: https://krzysztofga.github.io/GetAcademy/Module-2/oppgaver/3-funkcjonell-programmering-file-map-reduce/chessImperativ.html
+[3]: https://github.com/KrzysztofGA/GetAcademy/tree/master/Module-2/oppgaver/3-funkcjonell-programmering-file-map-reduce
+[4]: https://www.youtube.com/watch?v=PJgyeqop_NA

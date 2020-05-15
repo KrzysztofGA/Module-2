@@ -1,0 +1,30 @@
+body {
+    font-family: helvetica;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+tr,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    min-width: 50px;
+    padding: 4px;
+    height: 18px;
+}
+
+tr.underline {
+    border-bottom: 2px solid black;
+}
+
+td.label {
+    min-width: 100px;
+}
+
+td.bold {
+    font-weight: bold;
+}
