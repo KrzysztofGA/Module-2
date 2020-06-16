@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="no" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            .column {
+                float: left;
+                width: 33%;
+                padding: 10px;
+            }
+
+            .row::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content"></div>
+
+        <script src="model.js"></script>
+        <script src="fake-data.js"></script>
+        <script src="statistics-new.js"></script>
+        <script src="statistics.js"></script>
+        <script>
+            const contentDiv = document.getElementById('content');
+            statShow();
+        </script>
+    </body>
+</html>

@@ -2,8 +2,8 @@ const model = {
     users: [],
     groups: [],
     notes: [],
-    activeView: 'group',
+    activeView: '',
     activeUser: 'Mr. Blue',
-    activeGroup: 'Blue about blue 1',
+    activeGroup: '',
     activeStatistics: '',
 };
